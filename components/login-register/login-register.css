@@ -48,6 +48,7 @@ input:focus {
 }
 
 md-input-container.md-login_register:not(.md-input-invalid).md-input-focused .md-input {
+    display: block;
     color: white;
 }
 
