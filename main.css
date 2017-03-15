@@ -1,0 +1,38 @@
+/*
+CSS for the CS142 project #5 main page
+
+Since CSS uses a global name space for classes we should use class names starting with
+cs142-main- here.
+*/
+md-toolbar.cs142Project5-toolbar {
+	padding: 0px 12px 0 12px;
+}
+#content {
+	background-image: url(images/background.gif);
+}
+
+div.cs142-logoutButton {
+    max-width: 360px;
+    max-height: 36px;
+    margin: 4px;
+    border: white 3px solid;
+    padding: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 12px 0 12px;
+}
+
+div.cs142-uploadButton {
+    max-width: 360px;
+    max-height: 36px;
+    margin: 4px;
+    border: white 3px solid;
+    padding: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 12px 0 12px;
+}
+
+input.file {
+max-height: 36px;
+}

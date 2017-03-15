@@ -1,0 +1,52 @@
+<div class="cs142-login">
+	<h2>User Login</h2>
+	<md-input-container class = "md-block">
+        <label>Login Name</label>
+        <input ng-model="login.loginName">
+    </md-input-container>
+      <md-input-container class = "md-block">
+        <label>Password</label>
+        <input ng-model="login.password" type = "password">
+    </md-input-container>
+	<!--<span><h4>Login Name</h4><input ng-model = "login.loginName"></input></span>
+	<span><h4>Password</h4><input ng-model = "login.password"></input></span>-->
+	<span>{{login.statusInfo}}</span>
+	<div class = "cs142-loginButton" ng-click = "loginClick()">Log In</div>
+</div>
+<div class="cs142-signup">
+	<h2>New User</h2>
+	<md-input-container class = "md-block">
+        <label>Login Name</label>
+        <input ng-model="register.loginName">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Password</label>
+        <input ng-model="register.password" type = "password">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Please enter the password again</label>
+        <input ng-model="register.password2" type = "password">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>First Name</label>
+        <input ng-model="register.firstName">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Last Name</label>
+        <input ng-model="register.lastName">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Location</label>
+        <input ng-model="register.location">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Occupation</label>
+        <input ng-model="register.occupation">
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Description</label>
+        <input ng-model="register.description">
+    </md-input-container>
+	<span>{{register.statusInfo}}</span>
+	<div class = "cs142-registerButton" ng-click="registerClick()">Register Me</div>
+</div>

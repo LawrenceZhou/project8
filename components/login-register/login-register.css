@@ -1,0 +1,61 @@
+div.cs142-login {
+    float: left;
+    max-width: 360px;
+    margin: 0;
+    padding: 1em;
+    color: white;
+}
+
+div.cs142-loginButton {
+    max-width: 360px;
+    margin: 4px;
+    border: white 3px solid;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+div.cs142-signup {
+    margin-left: 370px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+    color: white;
+}
+
+div.cs142-registerButton {
+    max-width: 360px;
+    margin: 4px;
+    border: white 3px solid;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+input{
+border-right: #ffffff 0px solid;
+border-top: #ffffff 0px solid;
+font-size: 9pt;
+border-left: #ffffff 0px solid;
+border-bottom: #c0c0c0 1px solid;
+background-color: transparent;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    color: white;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: white;
+}
+
+md-input-container label{
+  color: white;
+}
+

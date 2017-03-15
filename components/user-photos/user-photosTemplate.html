@@ -1,0 +1,21 @@
+<md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
+	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5-image">
+	<div class = "cs142Project5-photoTime" align = "right">posted on {{photo.date_time}}</div>
+    <md-card-content>
+		<md-list flex="">
+        <md-subheader ng-hide="!photo.comments.length" class="md-no-sticky">Comments</md-subheader>
+        <md-list-item class="md-3-line" ng-repeat="comment in photo.comments">
+          <div class="md-list-item-text" layout="column">
+            <h3><a href="#/users/{{comment.user._id}}" class = "cs142Project5-commentUser">{{comment.user.first_name + " " + comment.user.last_name}}</a></h3>
+            <h4>{{comment.date_time}}</h4>
+            <p>{{comment.comment}}</p>
+          </div>
+        </md-list-item>       
+      </md-list>
+      <md-input-container class = "md-block" flex-gt-xs="">
+        <label>Comment on it</label>
+        <input ng-model="newComment[photo._id]">
+              <md-button ng-click="postComment(photo._id)">Post!</md-button>
+      </md-input-container>
+    </md-card-content>
+</md-card>

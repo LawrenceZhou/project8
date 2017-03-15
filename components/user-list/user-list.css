@@ -1,0 +1,43 @@
+ul.cs142Project5 {
+	list-style:none;
+	margin: 1px 0 1px 0px;
+	padding:0;		
+}
+ul.cs142Project5 li {
+	margin-bottom:1px;
+	border: 1px solid #f2f2f2;
+	display:block;
+	font-weight:bold;
+	color: #2f36a9;	
+	text-decoration:none;	
+	padding:8px 0 8px 0px;
+	background: #dadbf1;
+	height:48px;
+	text-align: center;
+}
+
+ul.cs142Project5 li:hover {
+	padding:12px 0px 8px 0px;
+	background: #dadbf1;
+	color: #339900;
+	border-left:4px solid #2f36a9;
+	text-align: center;
+	height:54px;
+}
+
+
+
+a.cs142Project5userlist {
+	font-size: 32px;
+	text-decoration: none;
+	color: #2f36a9;	
+}
+
+div.cs142Project5-friendsHeader {
+	background: #2F35A7;
+	height:48px;
+	color: #dadbf1;
+	font-size: 32px;
+	text-align: center;
+	padding:8px 0px 3px 0px;
+}

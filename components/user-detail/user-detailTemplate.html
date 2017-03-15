@@ -1,0 +1,15 @@
+<md-card class = "cs142Project5-userBlock">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{user.name}}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+		<img src = "/images/location.png" class = "cs142Project5-icon"><div class = "cs142Project5-subHeader">Location:</div> <div class="cs142Project5-item">{{user.location}}</div>
+		<img src = "/images/occupation.png" class = "cs142Project5-icon"><div class = "cs142Project5-subHeader">Occupation:</div><div class="cs142Project5-item">{{user.occupation}}</div>
+		<img src = "/images/description.png" class = "cs142Project5-icon"><div class = "cs142Project5-subHeader">Description:</div> <div class="cs142Project5-item">{{user.description}}</div>
+    </md-card-content>
+    <md-card-actions layout="column" layout-align="start">
+      <md-button><a href="#/photos/{{user._id}}" class = "cs142Project5-view">View the photos</a></md-button>
+    </md-card-actions>
+</md-card>
