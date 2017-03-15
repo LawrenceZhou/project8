@@ -80,7 +80,7 @@ Promise.all(removePromises).then(function () {
             return Photo.create({
                 file_name: photo.file_name,
                 date_time: photo.date_time,
-                user_id: mapFakeId2RealId[photo.user_id]
+                user_id: mapFakeId2RealId[photo.user_id],
                 people_liked: []
             }, function (err, photoObj) {
                 if (err) {
