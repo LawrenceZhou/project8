@@ -16,4 +16,8 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
             $scope.main.toolBar = firstName + " " + lastName;
             $scope.user.name = firstName + " " + lastName;
         });
+
+    $scope.viewPhoto = function(user_id) {
+        $location.path("/photos/" +user_id.toString());
+    };
   }]);
