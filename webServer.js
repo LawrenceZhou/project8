@@ -298,7 +298,7 @@ app.post('/admin/login', function(request, response) {
 });
 
 app.post('/admin/logout', function(request, response, callback) {
-    delete request.session.user_id;
+    delete request.session._id;
     delete request.session.login_name;
     request.session.destroy(function(err) {
         callback(err);  });
@@ -429,7 +429,7 @@ app.post('/like/:photo_id', function(request, response, callback) {
         return response.status(401).send("not log in");
     }else {
         var photoid = request.params.photo_id;
-        var likeduserid = request.session.user_id;
+        var likeduserid = request.session._id;
         Photo.findOne({_id: photoid}, function (err, photo) {
             if (err) {
                 console.log('/like/:photo_id', err);
