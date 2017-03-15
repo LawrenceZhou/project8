@@ -35,15 +35,35 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
                   $scope.newComment[photo_id] = "";
                   var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
                   var photoList = photo.query({}, function() {
-                    $scope.photos = photoList;
+                      $scope.photos = photoList;
                   });
               }             
           }, function errorCallback(response){
               if(response.status === 400) {
-                console.log("cooment unsuccessful");
+                console.log("coment unsuccessful");
               }
           }); 
       }
+    };
+
+    $scope.like = function(photo_id){
+        var url = '/like/' + photo_id;
+        //var modelObj = JSON.stringify({userLiked_id : $scope.user._id});
+        var modelObj = JSON.stringify({});
+
+        $http.post(url, modelObj).then(function successfCallback(response){
+            if(response.status === 200) {
+                console.log("like successful");
+                var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
+                var photoList = photo.query({}, function() {
+                    $scope.photos = photoList;
+                });
+            }
+          }, function errorCallback(response){
+              if(response.status === 400) {
+                  console.log("like unsuccessful");
+              }
+          }); 
     };
 
 
