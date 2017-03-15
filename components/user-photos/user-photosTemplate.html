@@ -1,7 +1,10 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
 	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5-image">
 	<div class = "cs142Project5-photoTime" align = "right">posted on {{photo.date_time}}</div>
     <md-card-content>
+    <md-icon md-font-icon="favorite_border"></md-icon>
 		<md-list flex="">
         <md-subheader ng-hide="!photo.comments.length" class="md-no-sticky">Comments</md-subheader>
         <md-list-item class="md-3-line" ng-repeat="comment in photo.comments">
