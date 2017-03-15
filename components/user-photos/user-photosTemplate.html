@@ -5,6 +5,8 @@
 	<div class = "cs142Project5-photoTime" align = "right">posted on {{photo.date_time}}</div>
     <md-card-content>
     <md-icon md-font-icon="favorite_border"></md-icon>
+    <md-icon md-font-icon="android" aria-label="android"></md-icon>
+    <md-icon class="icon_home" aria-label="Home"></md-icon>
 		<md-list flex="">
         <md-subheader ng-hide="!photo.comments.length" class="md-no-sticky">Comments</md-subheader>
         <md-list-item class="md-3-line" ng-repeat="comment in photo.comments">
