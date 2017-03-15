@@ -18,6 +18,6 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
         });
 
     $scope.viewPhoto = function(user_id) {
-        $location.path("#/photos/" +user_id.toString());
+        $location.path("/photos/" +user_id.toString());
     };
   }]);
