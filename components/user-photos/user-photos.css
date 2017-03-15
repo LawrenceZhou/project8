@@ -15,3 +15,7 @@ md-card.cs142Project5-photoBlock {
 img.cs142Project5-image {
 	width: 600px;
 }
+
+md-icon svg {
+  fill: red;
+}
