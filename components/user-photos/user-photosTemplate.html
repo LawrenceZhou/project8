@@ -5,8 +5,8 @@
     <!--<span ng-if="!u.who_liked.includes(root_currentUserId)"><button type="button" class="pure-button pure-button-primary" ng-click="like(u._id);">Like</button></span>
       <span ng-if="u.who_liked.includes(root_currentUserId)"><button type="button" class="pure-button pure-button-primary" ng-click="unlike(u._id);">You liked! Click to Unlike</button></span>
       <span ng-if="u.who_liked.length">{{u.who_liked.length}} people liked this!</span>-->
-    <md-icon md-svg-src="/images/favorite.svg" ng-if="photo.people_liked.includes(user._id)" ng-click="unlike(photo._id)"></md-icon>
-    <md-icon md-svg-src="/images/favorite_border.svg" ng-if="!photo.people_liked.includes(user._id)" ng-click="like(photo._id)"></md-icon>
+    <md-icon md-svg-src="/images/favorite.svg" ng-if="photo.people_liked.includes(currentUserId)" ng-click="unlike(photo._id)"></md-icon>
+    <md-icon md-svg-src="/images/favorite_border.svg" ng-if="!photo.people_liked.includes(currentUserId)" ng-click="like(photo._id)"></md-icon>
     <p>{{photo.people_liked.length}} people liked this!</p>
 		<md-list flex="">
         <md-subheader ng-hide="!photo.comments.length" class="md-no-sticky">Comments</md-subheader>
