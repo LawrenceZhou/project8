@@ -47,15 +47,15 @@ input:focus {
     outline-width: 0;
 }
 
-md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+md-input-container.md-login_register:not(.md-input-invalid).md-input-focused .md-input {
     color: white;
 }
 
-md-input-container:not(.md-input-invalid).md-input-focused label {
+md-input-container.md-login_register:not(.md-input-invalid).md-input-focused label {
     color: white;
 }
 
-md-input-container label{
+md-input-container.md-login_register label{
   color: white;
 }
 
