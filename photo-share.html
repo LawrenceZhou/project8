@@ -46,7 +46,7 @@
         <span flex></span>
         <input type="file" ng-if= "isLoggedIn" accept="image/*"  onchange="angular.element(this).scope().inputFileNameChanged(this)">
         <span flex></span>
-        <div class = "cs142-uploadButton" ng-if= "isLoggedIn" ng-click="uploadClick()">upload a photo</div>
+        <md-button class="md-raised" ng-if= "isLoggedIn" ng-click="uploadClick()">Upload A Photo</md-button>
         <span flex></span>
         <h4 ng-if= "isLoggedIn">{{main.toolBar || ""}}</h4>
         </md-toolbar>
