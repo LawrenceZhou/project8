@@ -141,6 +141,8 @@ $scope.deleteComment = function(photo_id, comment_id){
 
             $http.post(url, modelObj).then(function successfCallback(response){
                 if(response.status === 200) {
+                  $rootScope.$broadcast('LoggedOut');
+                  $scope.isLoggedIn = false;
                     console.log($scope.currentUserId + "delete user successful");
                     $location.path("/login-register");
                 }
