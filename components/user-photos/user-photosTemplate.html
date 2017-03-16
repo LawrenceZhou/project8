@@ -7,7 +7,7 @@
       <span ng-if="u.who_liked.length">{{u.who_liked.length}} people liked this!</span>-->
     <md-icon md-svg-src="/images/favorite.svg" ng-if="photo.people_liked.includes(main.currentUserId)" ng-click="unlike(photo._id)"></md-icon>
     <md-icon md-svg-src="/images/favorite_border.svg" ng-if="!photo.people_liked.includes(main.currentUserId)" ng-click="like(photo._id)"></md-icon>
-    <p ng-if = "photo.people_liked.includes(main.currentUserId">You liked this! {{photo.people_liked.length}} people liked this!</p>
+    <p ng-if = "photo.people_liked.includes(main.currentUserId)">You liked this! {{photo.people_liked.length}} people liked this!</p>
     <p ng-if="!photo.people_liked.includes(main.currentUserId)">{{photo.people_liked.length}} people liked this!</p>
 		<md-list flex="">
         <md-subheader ng-hide="!photo.comments.length" class="md-no-sticky">Comments</md-subheader>
