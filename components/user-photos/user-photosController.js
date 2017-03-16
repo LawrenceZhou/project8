@@ -106,5 +106,24 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
           }); 
     };
 
+$scope.deleteComment = function(photo_id, comment_id){
+        var url = '/deleteComment';
+        var modelObj = JSON.stringify({photo_id : photo_id, comment_id : comment_id});
+        //var modelObj = JSON.stringify({});
+
+        $http.post(url, modelObj).then(function successfCallback(response){
+            if(response.status === 200) {
+                console.log($scope.currentUserId + "delete comment successful");
+                var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
+                var photoList = photo.query({}, function() {
+                    $scope.photos = photoList;
+                });
+            }
+          }, function errorCallback(response){
+              if(response.status === 400) {
+                  console.log("delete comment unsuccessful");
+              }
+          }); 
+    };
 
   }]);
