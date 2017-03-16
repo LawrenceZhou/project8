@@ -522,7 +522,6 @@ app.post('/deleteComment', function(request, response, callback) {
     if (!request.session.login_name) {
         return response.status(401).send("not log in");
     }else {
-        console.log("delete comment");
         var photoid = request.body.photo_id;
         var comment_id = request.body.comment_id;
         Photo.findOne({_id: photoid}, function (err, photo) {

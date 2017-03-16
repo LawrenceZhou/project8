@@ -109,8 +109,7 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
 $scope.deleteComment = function(photo_id, comment_id){
         var url = '/deleteComment';
         var modelObj = JSON.stringify({photo_id : photo_id, comment_id : comment_id});
-        //var modelObj = JSON.stringify({});
-console.log("what");
+
         $http.post(url, modelObj).then(function successfCallback(response){
             if(response.status === 200) {
                 console.log($scope.currentUserId + "delete comment successful");
