@@ -17,9 +17,27 @@ div.cs142Project5-delete {
 	display: inline;
 	cursor: pointer;
 }
+
 div.cs142Project5-delete:hover { 
 	color: #221B9B;
 }
+
+h4.cs142Project5-commentTime {
+	float: left;
+	display: inline;
+}
+
+h4.cs142Project5-commentDelete {
+	color: #9A8787;
+	float: right; 
+	display: inline;
+	cursor: pointer;
+}
+
+h4..cs142Project5-commentDelete:hover { 
+	color: #221B9B;
+}
+
 md-card.cs142Project5-photoBlock {
 	width: 600px;
 }

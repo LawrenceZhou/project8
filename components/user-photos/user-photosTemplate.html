@@ -11,7 +11,7 @@
         <md-list-item class="md-3-line" ng-repeat="comment in photo.comments">
           <div class="md-list-item-text" layout="column">
             <h3><a href="#/users/{{comment.user._id}}" class = "cs142Project5-commentUser">{{comment.user.first_name + " " + comment.user.last_name}}</a></h3>
-            <h4>{{comment.date_time}}</h4>
+            <div><h4 class = "cs142Project5-commentTime">{{comment.date_time}}</h4> <h4 class = "cs142Project5-commentDelete">Delete</h4></div>
             <p>{{comment.comment}}</p>
           </div>
         </md-list-item>       
