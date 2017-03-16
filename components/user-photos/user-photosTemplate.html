@@ -1,6 +1,6 @@
 <md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
 	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5-image">
-	<div class = "cs142Project5-photoTime" style= "display:inline" align = "left">posted on {{photo.date_time}}</div><div class = "cs142Project5-photoTime" style= "display:inline" align = "right">delete</div>
+	<div class = "cs142Project5-photoTime" style= "float: left" align = "left">posted on {{photo.date_time}}</div><div class = "cs142Project5-photoTime" style= "float: right" align = "right">delete</div>
   <span>abc</span><span>123</span>
     <md-card-content>
     <md-icon md-svg-src="/images/favorite.svg" ng-if="photo.people_liked.includes(main.currentUserId)" ng-click="unlike(photo._id)"></md-icon>
