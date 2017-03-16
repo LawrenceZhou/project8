@@ -66,5 +66,25 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
           }); 
     };
 
+    $scope.unlike = function(photo_id){
+        var url = '/unlike/' + photo_id;
+        //var modelObj = JSON.stringify({userLiked_id : $scope.user._id});
+        var modelObj = JSON.stringify({});
+
+        $http.post(url, modelObj).then(function successfCallback(response){
+            if(response.status === 200) {
+                console.log($scope.currentUserId + "unlike successful");
+                var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
+                var photoList = photo.query({}, function() {
+                    $scope.photos = photoList;
+                });
+            }
+          }, function errorCallback(response){
+              if(response.status === 400) {
+                  console.log("unlike unsuccessful");
+              }
+          }); 
+    };
+
 
   }]);
