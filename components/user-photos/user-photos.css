@@ -27,14 +27,14 @@ h4.cs142Project5-commentTime {
 	display: inline;
 }
 
-h4.cs142Project5-commentDelete {
+div.cs142Project5-commentDelete {
 	color: #9A8787;
 	float: right; 
 	display: inline;
 	cursor: pointer;
 }
 
-h4.cs142Project5-commentDelete:hover { 
+div.cs142Project5-commentDelete:hover { 
 	color: #221B9B;
 }
 
