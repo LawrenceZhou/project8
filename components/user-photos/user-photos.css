@@ -6,8 +6,16 @@ a.cs142Project5-commentUser {
 div.cs142Project5-photoTime {
 	margin: 5px 10px 5px 10px;
 	color: #626262;
+	float: left; 
+	display: inline;
 }
 
+div.cs142Project5-delete {
+	margin: 5px 10px 5px 10px;
+	color: #626262;
+	float: right; 
+	display: inline;
+}
 md-card.cs142Project5-photoBlock {
 	width: 600px;
 }
