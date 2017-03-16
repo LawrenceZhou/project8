@@ -135,7 +135,7 @@ $scope.deleteComment = function(photo_id, comment_id){
             .cancel('Cancel');
 
         $mdDialog.show(confirm).then(function() {
-            var url = '/deleteUser' + $scope.main.currentUserId;
+            var url = '/deleteUser/' + $scope.main.currentUserId;
             var modelObj = JSON.stringify({});
             //var modelObj = JSON.stringify({photo_id : photo_id, comment_id : comment_id});
 
