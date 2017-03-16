@@ -1,7 +1,7 @@
 'use strict';
 
-cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resource', '$location', '$rootScope', '$http',
-  function($scope, $routeParams, $resource, $location, $rootScope, $http) {
+cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resource', '$location', '$rootScope', '$http', '$event', '$mdDialog',
+  function($scope, $routeParams, $resource, $location, $rootScope, $http, $event, $mdDialog) {
     /*
      * Since the route is specified as '/photos/:userId' in $routeProvider config the
      * $routeParams  should have the userId property set with the path from the URL.
@@ -123,6 +123,35 @@ $scope.deleteComment = function(photo_id, comment_id){
                   console.log("delete comment unsuccessful");
               }
           }); 
+    };
+
+    $scope.deleteUser = function(ev){
+        var confirm = $mdDialog.prompt()
+            .title('Do you want to deleter your account?')
+            .textContent('All of your photos and comments will be deleted.')
+            .ariaLabel('Delete all')
+            .targetEvent(ev)
+            .ok('Delete')
+            .cancel('Cancel');
+
+        $mdDialog.show(confirm).then(function() {
+            var url = '/deleteUser' + user_id;
+        var modelObj = JSON.stringify({});
+        //var modelObj = JSON.stringify({photo_id : photo_id, comment_id : comment_id});
+
+        $http.post(url, modelObj).then(function successfCallback(response){
+            if(response.status === 200) {
+                console.log($scope.currentUserId + "delete user successful");
+                $location.path("/login-register");
+            }
+          }, function errorCallback(response){
+              if(response.status === 400) {
+                  console.log("delete user unsuccessful");
+              }
+          }); 
+        }, function() {
+       //$scope.status = 'You decided to keep your debt.';
+        });     
     };
 
   }]);
