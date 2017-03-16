@@ -201,7 +201,7 @@ app.get('/photosOfUser/:id', function (request, response) {
     
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             var photoListCopy;
-            Photo.find({user_id: id}, {__v: 0}, {sort: {people_liked.length: -1, date_time: -1}}, function (err, photoList) {
+            Photo.find({user_id: id}, {__v: 0}, {sort: {people_liked_number: -1, date_time: -1}}, function (err, photoList) {
                 if (err) {
                     console.error('Doing /photosOfUser/:id error:', err);
                     response.status(400).send(JSON.stringify(err));
@@ -329,7 +329,7 @@ app.post('/commentsOfPhoto/:photo_id', function(request, response, callback) {
                 return response.status(400).send("empty comment");
             }else{
                 var dt = new Date();
-                photo.comments.push({ comment: comment, user_id: request.session._id, date_time : dt});
+                photo.comments.push({comment: comment, user_id: request.session._id, date_time : dt});
                 response.end(JSON.stringify(photo));
                 photo.save();
                 callback();
@@ -445,7 +445,8 @@ app.post('/like/:photo_id', function(request, response, callback) {
                     return;
                 }else {
                     photo.people_liked.push(likeduserid);
-                    console.log('photoPeopleLiked:', photo.people_liked);
+                    photo.people_liked_number += 1;
+                    console.log('photoPeopleLiked:', photo.people_liked, photo.people_liked_number);
                     photo.save();
                     response.end(JSON.stringify("")); 
                 }
@@ -478,7 +479,8 @@ app.post('/unlike/:photo_id', function(request, response, callback) {
                 }else {
                     var indexToRemove = photo.people_liked.indexOf(likeduserid);
                     photo.people_liked.splice(indexToRemove, 1);
-                    console.log('photoPeopleLiked:', photo.people_liked);
+                    photo.people_liked_number -= 1;
+                    console.log('photoPeopleLiked:', photo.people_liked,  photo.people_liked_number);
                     photo.save();
                     response.end(JSON.stringify("")); 
                 }

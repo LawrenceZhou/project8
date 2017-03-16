@@ -81,7 +81,8 @@ Promise.all(removePromises).then(function () {
                 file_name: photo.file_name,
                 date_time: photo.date_time,
                 user_id: mapFakeId2RealId[photo.user_id],
-                people_liked: []
+                people_liked: [],
+                people_liked_number: 0
             }, function (err, photoObj) {
                 if (err) {
                     console.error('Error create user', err);
