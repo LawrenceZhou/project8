@@ -126,7 +126,7 @@ $scope.deleteComment = function(photo_id, comment_id){
     };
 
     $scope.deleteUser = function(ev){
-        var confirm = $mdDialog.prompt()
+        var confirm = $mdDialog.confirm()
             .title('Do you want to deleter your account?')
             .textContent('All of your photos and comments will be deleted.')
             .ariaLabel('Delete all')
