@@ -461,7 +461,6 @@ app.post('/unlike/:photo_id', function(request, response, callback) {
     }else {
         var photoid = request.params.photo_id;
         var likeduserid = request.session._id;
-        console.log('/unlike/:photo_id'+likeduserid);
         Photo.findOne({_id: photoid}, function (err, photo) {
             if (err) {
                 console.log('/unlike/:photo_id', err);
@@ -472,7 +471,8 @@ app.post('/unlike/:photo_id', function(request, response, callback) {
                     console.log('Photo with photo_id:' + photo_id + ' not found.');
                     response.status(400).send('Photo not found');
                     return;
-                }else if (photo.people_liked.indexOf(likeduserid) !== -1) {
+                }else if (photo.people_liked.indexOf(likeduserid) === -1) {
+
                     response.status(400).send('Not yet liked');
                     return;
                 }else {
