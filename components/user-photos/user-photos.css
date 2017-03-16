@@ -18,7 +18,7 @@ div.cs142Project5-delete {
 	cursor: pointer;
 }
 div.cs142Project5-delete:hover { 
-	color: black;
+	color: #221B9B;
 }
 md-card.cs142Project5-photoBlock {
 	width: 600px;
