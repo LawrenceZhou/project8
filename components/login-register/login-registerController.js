@@ -18,6 +18,7 @@ cs142App.controller('LoginRegisterController', ['$scope', '$routeParams', '$reso
                   $location.path("/users/" + response.data._id.toString());
                   console.log("/users/" + response.data._id.toString());
                   $rootScope.currentUserId = response.data._id.toString();
+                  $scope.main.currentUserId = response.data._id.toString();
               }             
           }, function errorCallback(response){
               if(response.status === 400) {
