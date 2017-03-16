@@ -547,6 +547,59 @@ app.post('/deleteComment', function(request, response, callback) {
     }
 });
 
+
+app.post('/deleteUser/:user_id', function(request, response, callback) {
+    if (!request.session.login_name) {
+        return response.status(401).send("not log in");
+    }else {
+        var userid = request.params.user_id;
+
+        Photo.remove({user_id: userid}, function(err, photos) {
+            if (err) {
+                console.log('/deleteUser/:user_id, delete photo', err);
+                response.status(400).send(JSON.stringify(err));
+                return;
+            }
+        });
+
+        User.findOne({_id: userid}, function (err, user){ //.create   
+            if (err) {
+                console.log('/deleteUser/:user_id, delete user', err);
+                response.status(400).send(JSON.stringify(err));
+                return;
+            }
+            user.remove({});
+            user.save(); 
+        });
+
+        Photo.findOne({}, function (err, photo) {
+            if (err) {
+                console.log('/deleteUser', err);
+                response.status(400).send(JSON.stringify(err));
+                return;
+            }else {
+                if (photo === null) {
+                    console.log('Photo with photo_id:' + photo_id + ' not found.');
+                    response.status(400).send('Photo not found');
+                    return;
+                }else {
+                    photo.comments = photo.comments.filter(function(comment) {
+                    return (comment.user_id.toString() !== userid.toString());
+                });
+                   if (photo.people_liked.indexOf(userid) !== -1) {
+                     var indexToRemove = photo.people_liked.indexOf(userid);
+                     photo.people_liked.splice(indexToRemove, 1);
+                    photo.people_liked_number -= 1;
+                    console.log('user like Deleted');
+                }
+                    photo.save();
+                    response.end(JSON.stringify("")); 
+                }
+            }
+        });
+    }
+});
+
 var server = app.listen(3000, function () {
     var port = server.address().port;
     console.log('Listening at http://localhost:' + port + ' exporting the directory ' + __dirname);
