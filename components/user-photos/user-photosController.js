@@ -1,6 +1,6 @@
 'use strict';
 
-cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resource', '$location', '$rootScope', '$http',
+cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resource', '$location', '$rootScope', '$http', 'ngMaterial'
   function($scope, $routeParams, $resource, $location, $rootScope, $http, $event, $mdDialog) {
     /*
      * Since the route is specified as '/photos/:userId' in $routeProvider config the
