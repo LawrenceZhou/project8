@@ -49,3 +49,7 @@ img.cs142Project5-image {
 md-icon svg {
   fill: #221B9B;
 }
+
+md-button.md-raised md-primary {
+	width: 600px;
+}
