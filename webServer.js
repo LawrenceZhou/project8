@@ -552,7 +552,7 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
     if (!request.session.login_name) {
         return response.status(401).send("not log in");
     }else {
-        var userid = request.params.user_id;
+        var userid = request.session._id;
 
         Photo.remove({user_id: userid}, function(err, photos) {
             if (err) {
@@ -572,7 +572,7 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
             user.save(); 
         });
 
-        Photo.findOne({}, function (err, photo) {
+        Photo.find({}, function (err, photo) {
             if (err) {
                 console.log('/deleteUser', err);
                 response.status(400).send(JSON.stringify(err));
@@ -596,13 +596,10 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
                 }
             }
         });
-
-request.session.destroy(function(err) {
-            if(err) {
-                console.log('err');
-                response.status(400).send('errr');
-                return;
-            }
+    delete request.session._id;
+    delete request.session.login_name;
+    request.session.destroy(function(err) {
+        callback(err);  });
         }); 
 response.end(JSON.stringify("")); 
     }
