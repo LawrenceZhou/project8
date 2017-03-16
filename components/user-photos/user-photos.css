@@ -34,7 +34,7 @@ h4.cs142Project5-commentDelete {
 	cursor: pointer;
 }
 
-h4..cs142Project5-commentDelete:hover { 
+h4.cs142Project5-commentDelete:hover { 
 	color: #221B9B;
 }
 
@@ -47,5 +47,5 @@ img.cs142Project5-image {
 }
 
 md-icon svg {
-  fill: red;
+  fill: #221B9B;
 }
