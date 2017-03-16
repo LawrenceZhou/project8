@@ -15,6 +15,10 @@ div.cs142Project5-delete {
 	color: #9A8787;
 	float: right; 
 	display: inline;
+	cursor: pointer;
+}
+div.cs142Project5-delete:hover { 
+	color: black;
 }
 md-card.cs142Project5-photoBlock {
 	width: 600px;
