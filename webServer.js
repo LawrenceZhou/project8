@@ -561,6 +561,7 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
                 return;
             }
         });
+        Photo.save();
 
         User.findOne({_id: userid}, function (err, user){ //.create   
             if (err) {
