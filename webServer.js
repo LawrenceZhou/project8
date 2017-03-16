@@ -593,10 +593,18 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
                     console.log('user like Deleted');
                 }
                     photo.save();
-                    response.end(JSON.stringify("")); 
                 }
             }
         });
+
+request.session.destroy(function(err) {
+            if(err) {
+                console.log('err');
+                response.status(400).send('errr');
+                return;
+            }
+        }); 
+response.end(JSON.stringify("")); 
     }
 });
 
