@@ -135,20 +135,20 @@ $scope.deleteComment = function(photo_id, comment_id){
             .cancel('Cancel');
 
         $mdDialog.show(confirm).then(function() {
-            var url = '/deleteUser' + user_id;
-        var modelObj = JSON.stringify({});
-        //var modelObj = JSON.stringify({photo_id : photo_id, comment_id : comment_id});
+            var url = '/deleteUser' + $scope.main.currentUserId;
+            var modelObj = JSON.stringify({});
+            //var modelObj = JSON.stringify({photo_id : photo_id, comment_id : comment_id});
 
-        $http.post(url, modelObj).then(function successfCallback(response){
-            if(response.status === 200) {
-                console.log($scope.currentUserId + "delete user successful");
-                $location.path("/login-register");
-            }
-          }, function errorCallback(response){
-              if(response.status === 400) {
-                  console.log("delete user unsuccessful");
-              }
-          }); 
+            $http.post(url, modelObj).then(function successfCallback(response){
+                if(response.status === 200) {
+                    console.log($scope.currentUserId + "delete user successful");
+                    $location.path("/login-register");
+                }
+              }, function errorCallback(response){
+                  if(response.status === 400) {
+                      console.log("delete user unsuccessful");
+                  }
+            }); 
         }, function() {
        //$scope.status = 'You decided to keep your debt.';
         });     
