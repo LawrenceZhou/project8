@@ -1,10 +1,7 @@
 <md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
 	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5-image">
-	<div class = "cs142Project5-photoTime" align = "right">posted on {{photo.date_time}}</div>
+	<div class = "cs142Project5-photoTime" align = "left">posted on {{photo.date_time}}</div>
     <md-card-content>
-    <!--<span ng-if="!u.who_liked.includes(root_currentUserId)"><button type="button" class="pure-button pure-button-primary" ng-click="like(u._id);">Like</button></span>
-      <span ng-if="u.who_liked.includes(root_currentUserId)"><button type="button" class="pure-button pure-button-primary" ng-click="unlike(u._id);">You liked! Click to Unlike</button></span>
-      <span ng-if="u.who_liked.length">{{u.who_liked.length}} people liked this!</span>-->
     <md-icon md-svg-src="/images/favorite.svg" ng-if="photo.people_liked.includes(main.currentUserId)" ng-click="unlike(photo._id)"></md-icon>
     <md-icon md-svg-src="/images/favorite_border.svg" ng-if="!photo.people_liked.includes(main.currentUserId)" ng-click="like(photo._id)"></md-icon>
     <p ng-if = "photo.people_liked.includes(main.currentUserId)">You liked this! {{photo.people_liked.length}} people liked this!</p>
