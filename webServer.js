@@ -201,7 +201,7 @@ app.get('/photosOfUser/:id', function (request, response) {
     
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             var photoListCopy;
-            Photo.find({user_id: id}, {__v: 0}, function (err, photoList) {
+            Photo.find({user_id: id}, {__v: 0}, {sort: {people_liked.length: -1, date_time: -1}}, function (err, photoList) {
                 if (err) {
                     console.error('Doing /photosOfUser/:id error:', err);
                     response.status(400).send(JSON.stringify(err));
