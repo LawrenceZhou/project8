@@ -561,7 +561,6 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
                 return;
             }
         });
-        Photo.save();
 
         User.findOne({_id: userid}, function (err, user){ //.create   
             if (err) {
@@ -573,27 +572,31 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
             user.save(); 
         });
 
-        Photo.find({}, function (err, photo) {
+        Photo.find({}, function (err, photoList) {
             if (err) {
                 console.log('/deleteUser', err);
                 response.status(400).send(JSON.stringify(err));
                 return;
             }else {
-                if (photo === null) {
-                    console.log('Photo with photo_id:' + photo_id + ' not found.');
+                if (photoList === null) {
+                    console.log('Photo List not found.');
                     response.status(400).send('Photo not found');
                     return;
                 }else {
-                    photo.comments = photo.comments.filter(function(comment) {
+                    var i;
+                    for(i = 0; i < photoList.length; i++) {
+                        photoList[i].comments = photoList[i].comments.filter(function(comment) {
                     return (comment.user_id.toString() !== userid.toString());
                 });
-                   if (photo.people_liked.indexOf(userid) !== -1) {
-                     var indexToRemove = photo.people_liked.indexOf(userid);
-                     photo.people_liked.splice(indexToRemove, 1);
-                    photo.people_liked_number -= 1;
+                   if (photoList[i].people_liked.indexOf(userid) !== -1) {
+                     var indexToRemove = photoList[i].people_liked.indexOf(userid);
+                     photoList[i].people_liked.splice(indexToRemove, 1);
+                    photoList[i].people_liked_number -= 1;
                     console.log('user like Deleted');
                 }
-                    photo.save();
+                    photoList[i].save();
+                    }
+                    
                 }
             }
         });
