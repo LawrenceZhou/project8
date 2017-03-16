@@ -461,6 +461,7 @@ app.post('/unlike/:photo_id', function(request, response, callback) {
     }else {
         var photoid = request.params.photo_id;
         var likeduserid = request.session._id;
+        console.log('/unlike/:photo_id'+ikeduserid);
         Photo.findOne({_id: photoid}, function (err, photo) {
             if (err) {
                 console.log('/unlike/:photo_id', err);
