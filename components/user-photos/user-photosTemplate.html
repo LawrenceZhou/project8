@@ -29,6 +29,7 @@
             mentio-for="photo._id"
             mentio-trigger-char="'@'"
             mentio-search="searchPeople(term)"
+            mentio-select="getPeopleTextRaw(item)"
             mentio-items="peopleList"></mentio-menu>
 
               <md-button class="md-raised md-primary" ng-click="postComment(photo._id)">Post!</md-button>
