@@ -16,6 +16,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
     for(var p in $scope.photos) {
         p.col = $scope.getRandomInt(1, 3);
         p.row = $scope.getRandomInt(1, 3);
+        console.log(p.row, p.col);
     }
 
     $scope.getRandomInt = function(min, max) {
