@@ -1,4 +1,5 @@
 md-icon svg.cs142Project5-icon {
+	fill: ;
 	width: 24px;
 	height: 24px;
 	float: left;
@@ -26,3 +27,7 @@ md-card.cs142Project5-userBlock {
 
 .toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
   color: white; }
+
+  md-subheader.md-no-sticky {
+  	font-weight: bold;
+  }
