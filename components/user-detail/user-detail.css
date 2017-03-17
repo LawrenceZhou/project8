@@ -49,17 +49,23 @@ p.description {
 
 .cs142Project5-viewButton {
     max-width: 400px;
-    margin: 4px;
-    border-top: #2F36A9 3px solid;
-    border-bottom: #2F36A9 3px solid;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: #2F36A9;
+    margin-left: 100px;
+    border-top: #221A99 3px solid;
+    border-bottom: #2221A99 3px solid;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #221A99;
     cursor: pointer;
     text-align: center;
     position: relative;
 }
 
+.cs142Project5-viewButton:hover {
+	color: white;
+	background-color: #221A99;
+	transition-delay: 250ms;
+	transition: color 250ms, background-color 250ms;
+}
 .cs142Project5-viewButton:before {
     padding:0;margin:0;display:block;/* not really needed */
     content: "";
@@ -89,7 +95,7 @@ p.description {
 
 .cs142Project5-viewButton:hover:after {
     height: 100%;
-    transition: width 250ms;
+    transition: height 250ms;
 }
 
 
