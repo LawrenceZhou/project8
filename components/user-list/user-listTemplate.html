@@ -1,4 +1,4 @@
-<md-toolbar class="md-hue-2"><span style = "align: center;">Friends</span></md-toolbar>
+<div class = "cs142Project5-friendsHeader">Friends</div>
 <md-list-item ng-repeat="user in nameList" ng-click="viewUser(user._id)" class="noright">
     <img alt="{{ person.name }}" ng-src="/images/{{user.last_name.toLowerCase()}}1.jpg" class="md-avatar">
     <p>{{user.first_name + " " + user.last_name}}</p>
