@@ -46,7 +46,8 @@
         <span flex></span>
         <md-button class="md-primary md-hue-1" ng-click="logOutClick()" ng-if= "isLoggedIn">Log Out</md-button>
         <span flex></span>
-        <input type="file" ng-if= "isLoggedIn" accept="image/*" class = "upload" onchange="angular.element(this).scope().inputFileNameChanged(this)">
+        <div class="fileUpload btn btn-primary">
+            <span>Select...</span><input type="file" ng-if= "isLoggedIn" accept="image/*" class = "upload" onchange="angular.element(this).scope().inputFileNameChanged(this)"></div>
         <span flex></span>
         <md-button class="md-primary md-hue-1" ng-if= "isLoggedIn" ng-click="uploadClick()">Upload A Photo</md-button>
         <span flex></span>

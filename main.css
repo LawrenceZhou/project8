@@ -33,6 +33,11 @@ div.cs142-uploadButton {
     padding: 0px 12px 0 12px;
 }
 
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+}
 
 input.upload {
     position: absolute;
