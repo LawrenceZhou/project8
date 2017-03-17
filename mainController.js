@@ -106,7 +106,7 @@ cs142App.controller('MainController', ['$scope', '$resource', '$location', '$roo
                 headers: {'Content-Type': undefined},
             }).success(function(newPhoto){
                 $rootScope.$broadcast('photoAdded');
-                var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
+                var photo = $resource('http://localhost:3000/photosOfUser/'+$scope.main.currentUserId, {}, {'query': {method: 'GET', isArray : true}});
                   var photoList = photo.query({}, function() {
                       $scope.photos = photoList;
                   });
