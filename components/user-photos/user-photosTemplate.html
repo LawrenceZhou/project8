@@ -1,3 +1,12 @@
+<script type="text/ng-template" id="/people-mentions.tpl">
+    <ul class="list-group user-search">
+        <i mentio-menu-item="person" ng-repeat="person in items" class="list-group-item">
+            <!--<mg ng-src=" { {person.imageUrl} }" class="user-photo">-->
+            <span class="text-primary">{{person.first_name}}</span>
+        </li>
+    </ul>
+</script>
+
 <md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
 	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5-image">
 	<div><div class = "cs142Project5-photoTime">posted on {{photo.date_time}}</div><div class = "cs142Project5-delete" ng-click = "deletePhoto(photo._id)" ng-if="main.currentUserId == photo.user_id">Delete</div></div>
@@ -24,15 +33,6 @@
             mentio-trigger-char="'@'"
             mentio-template-url="/people-mentions.tpl"
             mentio-items="nameList"></mentio-menu>
-
-        <script type="text/ng-template" id="/people-mentions.tpl">
-            <ul class="list-group user-search">
-                <i mentio-menu-item="person" ng-repeat="person in items" class="list-group-item">
-                    <!--<mg ng-src=" { {person.imageUrl} }" class="user-photo">-->
-                    <span class="text-primary">{{person.first_name}}</span>
-                </li>
-            </ul>
-        </script>
 
               <md-button class="md-raised md-primary" ng-click="postComment(photo._id)">Post!</md-button>
       </md-input-container>
