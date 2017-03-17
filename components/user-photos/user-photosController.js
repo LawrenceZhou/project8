@@ -154,4 +154,12 @@ $scope.deleteComment = function(photo_id, comment_id){
         });     
     };
 
+    $scope.$on('photoAdded', function() {
+       var photo = $resource('http://localhost:3000/photosOfUser/'+$scope.main.currentUserId, {}, {'query': {method: 'GET', isArray : true}});
+                var photoList = photo.query({}, function() {
+                    $scope.photos = photoList;
+                    console.log("upload refesh successful");
+                });
+      });
+
   }]);
