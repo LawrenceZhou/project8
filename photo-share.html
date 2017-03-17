@@ -55,7 +55,7 @@
 
         <div class="container" flex layout="row">
 
-            <md-sidenav ng-if= "isLoggedIn" md-is-locked-open="true" class="md-whiteframe-z2">
+            <md-sidenav ng-if= "isLoggedIn" md-is-locked-open="true" class="md-whiteframe-z2" style = "background-color: transparent;">
                 <div ng-include="'components/user-list/user-listTemplate.html'" ng-controller="UserListController"></div>
             </md-sidenav>
 
