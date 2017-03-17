@@ -34,7 +34,6 @@ div.cs142-uploadButton {
 }
 
 div.fileUpload {
-    position: relative;
     overflow: hidden;
     margin : 5px;
         text-align: center;
@@ -42,7 +41,6 @@ div.fileUpload {
 }
 
 input.upload {
-    position: absolute;
     top: 0;
     right: 0;
     margin: 12px;
