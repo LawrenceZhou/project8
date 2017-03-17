@@ -13,7 +13,7 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
         var object = userList.query({}, function() {
         $scope.peopleList = object;
         for (var i = 0; i < $scope.peopleList.length; i++) {
-            $scope.peopleList[i].label = $scope.peopleList[i].first_name + $scope.peopleList[i].last_name;
+            $scope.peopleList[i].label = $scope.peopleList[i].first_name;
         }
         });
     };
