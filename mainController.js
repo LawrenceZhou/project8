@@ -40,7 +40,14 @@ cs142App.controller('MainController', ['$scope', '$resource', '$location', '$roo
 
          $scope.$on('LoggedIn', function() {
             $scope.isLoggedIn = true;
+        });
 
+          $scope.$on('photoAdded', function() {
+         var photo = $resource('http://localhost:3000/photosOfUser/'+$scope.main.currentUserId, {}, {'query': {method: 'GET', isArray : true}});
+                  var photoList = photo.query({}, function() {
+                      $scope.photos = photoList;
+                      console.log("upload refesh successful");
+                  });
         });
 
         var version = $resource('http://localhost:3000/test/:param', {param: 'info'}, {});
@@ -112,10 +119,6 @@ cs142App.controller('MainController', ['$scope', '$resource', '$location', '$roo
                 console.error('ERROR uploading photo', err);
                 
             });
-            var photo = $resource('http://localhost:3000/photosOfUser/'+$scope.main.currentUserId, {}, {'query': {method: 'GET', isArray : true}});
-                  var photoList = photo.query({}, function() {
-                      $scope.photos = photoList;
-                  });
         };  
         
     }]);
