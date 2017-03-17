@@ -84,7 +84,7 @@ div.cs142-signup {
       bottom: 0;
 }
 
-.cs142-loginButton:hover:before {
+.cs142-registerButton:hover:before {
       width: 50%;
       transition: width 500ms;
 }
@@ -100,7 +100,7 @@ div.cs142-signup {
       bottom: 0;
 }
 
-.cs142-loginButton:hover:after {
+.cs142-registerButton:hover:after {
       width: 50%;
       transition: width 500ms;
 }
