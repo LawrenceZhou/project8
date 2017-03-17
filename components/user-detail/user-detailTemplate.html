@@ -1,12 +1,9 @@
 <md-card class = "cs142Project5-userBlock">
-        <md-card-header>
-          <md-card-avatar>
-            <img alt="{{ user.last_name }}" ng-src="/images/{{user.last_name.toLowerCase()}}1.jpg">
-          </md-card-avatar>
-          <md-card-header-text>
-            <span class="md-title">{{user.name}}</span>
-          </md-card-header-text>
-        </md-card-header>
+<md-toolbar class="md-hue-2">
+<md-list-item class="secondary-button-padding">
+        <img alt="{{ user.last_name }}" ng-src="/images/{{user.last_name.toLowerCase()}}1.jpg" class="md-avatar"><h2>{{user.name}}</h2>
+          </md-list-item>
+</md-toolbar>
 <md-subheader class="md-no-sticky">User Detail</md-subheader>
     <md-card-content>
 
