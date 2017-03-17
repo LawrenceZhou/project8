@@ -22,7 +22,16 @@
         <mentio-menu
             mentio-for="photo._id"
             mentio-trigger-char="'@'"
-            mentio-items="people"></mentio-menu>
+            mentio-items="nameList"></mentio-menu>
+
+        <script type="text/ng-template" id="/people-mentions.tpl">
+            <ul class="list-group user-search">
+                <i mentio-menu-item="person" ng-repeat="person in items" class="list-group-item">
+                    <!--<mg ng-src=" { {person.imageUrl} }" class="user-photo">-->
+                    <span class="text-primary">person.first_name</span>
+                </li>
+            </ul>
+        </script>
 
               <md-button class="md-raised md-primary" ng-click="postComment(photo._id)">Post!</md-button>
       </md-input-container>
