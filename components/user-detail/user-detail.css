@@ -39,24 +39,57 @@ p.description {
 .gridListdemoBasicUsage md-grid-list {
   margin: 8px; }
 
-.gridListdemoBasicUsage .gray {
-  background: #f5f5f5; }
-
 .gridListdemoBasicUsage .cs142-preview {
   overflow:hidden;
 }
 
-.gridListdemoBasicUsage .yellow {
-  background: #ffff8d; }
-
-.gridListdemoBasicUsage .blue {
-  background: #84ffff; }
-
-.gridListdemoBasicUsage .purple {
-  background: #b388ff; }
-
-.gridListdemoBasicUsage .red {
-  background: #ff8a80; }
-
 .gridListdemoBasicUsage md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
+  transition: all 400ms ease-out 50ms; 
+}
+
+.cs142Project5-viewButton {
+    max-width: 400px;
+    margin: 4px;
+    border-top: #2F36A9 3px solid;
+    border-bottom: #2F36A9 3px solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #2F36A9;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.cs142Project5-viewButton:before {
+    padding:0;margin:0;display:block;/* not really needed */
+    content: "";
+    width: 3px;
+    height: 0;
+    background-color: #221A99;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+.cs142Project5-viewButton:hover:before {
+    height: 100%;
+    transition: width 250ms;
+}
+
+.cs142Project5-viewButton:after {
+    padding:0;margin:0;display:block;/* not really needed */
+    content: "";
+    width: 3px;
+    height: 0;
+    background-color: #221A99;
+    position: absolute;
+    right:0;
+    top: 0;
+}
+
+.cs142Project5-viewButton:hover:after {
+    height: 100%;
+    transition: width 250ms;
+}
+
+
