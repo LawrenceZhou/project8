@@ -30,3 +30,8 @@ md-card.cs142Project5-userBlock {
 md-content.cs142Project5-userDetail {
 	background-color: white; 
 }
+
+p.description {
+	padding-left: 5px;
+	padding-right: 5px;
+}
