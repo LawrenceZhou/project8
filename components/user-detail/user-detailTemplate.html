@@ -24,7 +24,10 @@
     <md-list-item class="secondary-button-padding">
 		<p class = "cs142Project5-subHeader">Description:</p></md-list-item><p class = "description">{{user.description}}</p>
 
-    </md-card-content>
+    <md-divider></md-divider>
+
+    <md-list-item class="secondary-button-padding">
+    <p class = "cs142Project5-subHeader">Preview:</p></md-list-item>
 
 <div class="gridListdemoBasicUsage">
   <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
@@ -35,6 +38,7 @@
 
   </md-grid-list>
 </div>
+    </md-card-content>
 
     <md-card-actions layout="column" layout-align="start">
       <md-button class="md-raised md-primary" ng-click="viewPhoto(user._id)" class = "cs142Project5-view">View the photos</a></md-button>
