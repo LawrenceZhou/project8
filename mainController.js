@@ -1,6 +1,6 @@
 'use strict';
 
-var cs142App = angular.module('cs142App', ['ngRoute', 'ngMaterial', 'ngResource', 'material.svgAssetsCache']);
+var cs142App = angular.module('cs142App', ['ngRoute', 'ngMaterial', 'ngResource']);
 
 cs142App.config(['$routeProvider', '$mdThemingProvider',
     function ($routeProvider, $mdThemingProvider) {
@@ -116,10 +116,3 @@ cs142App.controller('MainController', ['$scope', '$resource', '$location', '$roo
         
     }]);
 
-
-cs142App.controller('DemoCtrl', function($scope) {})
-  .config(['$mdIconProvider', function($mdIconProvider) {
-    $mdIconProvider
-      .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
-      .defaultIconSet('img/icons/sets/core-icons.svg', 24);
-  }]);
