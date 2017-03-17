@@ -1,5 +1,5 @@
 md-icon svg.cs142Project5-icon {
-	fill: #2f36a9;
+	fill: #8D7A7A;
 	width: 18px;
 	height: 18px;
 	float: left;
@@ -11,7 +11,7 @@ div.cs142Project5-item {
 	color: #2f36a9;
 }
 p.cs142Project5-subHeader {
-	font-size: 24px;
+	font-size: 18px;
 	color: #8D7A7A;
 	display: inline;
 }
