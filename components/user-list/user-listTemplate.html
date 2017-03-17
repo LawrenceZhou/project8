@@ -1,7 +1,4 @@
-<div class = "cs142Project5-friendsHeader">Friends</div>
-<ul class = "cs142Project5">
-	<li ng-repeat = "user in nameList"> <a class = "cs142Project5userlist" href="#/users/{{user._id}}">{{user.first_name + " " + user.last_name}}</a></li>
-</ul>
+<md-toolbar class="md-hue-2"><span>Friends</span></md-toolbar>
 <md-list-item ng-repeat="user in nameList" ng-click="viewUser(user._id)" class="noright">
     <img alt="{{ person.name }}" ng-src="/images/{{user.last_name.toLowerCase()}}1.jpg" class="md-avatar">
     <p>{{user.first_name + " " + user.last_name}}</p>
