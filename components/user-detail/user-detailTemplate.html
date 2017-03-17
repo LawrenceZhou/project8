@@ -2,14 +2,12 @@
 <md-toolbar class="md-hue-2">
         <h2>{{user.name}}</h2>
 </md-toolbar>
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline"></span>
-      </md-card-title-text>
-    </md-card-title>
+<md-subheader class="md-no-sticky">User Detail</md-subheader>
     <md-card-content>
 		<div><md-icon md-svg-src = "/images/location.svg" class = "cs142Project5-icon"></md-icon><div class = "cs142Project5-subHeader">Location:</div></div> <div class="cs142Project5-item">{{user.location}}</div>
+    <md-divider></md-divider>
 		<div><md-icon md-svg-src = "/images/occupation.svg" class = "cs142Project5-icon"></md-icon><div class = "cs142Project5-subHeader">Occupation:</div></div> <div class="cs142Project5-item">{{user.occupation}}</div>
+    <md-divider></md-divider>
 		<div><md-icon md-svg-src = "/images/description.svg" class = "cs142Project5-icon"></md-icon><div class = "cs142Project5-subHeader">Description:</div></div> <div class="cs142Project5-item">{{user.description}}</div>
     </md-card-content>
     <md-card-actions layout="column" layout-align="start">
