@@ -6,7 +6,7 @@ div.cs142-login {
     color: white;
 }
 
-div.cs142-loginButton {
+.cs142-loginButton {
     max-width: 360px;
     margin: 4px;
     border-top: white 3px solid;
@@ -17,7 +17,7 @@ div.cs142-loginButton {
     text-align: center;
 }
 
-div.cs142-loginButton:before {
+.cs142-loginButton:before {
      padding:0;margin:0;display:block;/* not really needed */
       content: "";
       width:50%;
@@ -28,13 +28,13 @@ div.cs142-loginButton:before {
       bottom: -3px;
 }
 
-div.cs142-loginButton:hover:before {
+.cs142-loginButton:hover:before {
       width: 100%;
       transition: width 500ms;
 }
 
 
-div.cs142-loginButton:after {
+.cs142-loginButton:after {
      padding:0;margin:0;display:block;/* not really needed */
       content: "";
       width:3px;
@@ -45,7 +45,7 @@ div.cs142-loginButton:after {
       right: -3px;
 }
 
-div.cs142-loginButton:hover:after {
+.cs142-loginButton:hover:after {
       height: 100%;
       transition: height 500ms;
 }
