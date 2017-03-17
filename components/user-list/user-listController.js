@@ -8,5 +8,9 @@ cs142App.controller('UserListController', ['$scope', '$resource',
         var object = userList.query({}, function() {
             $scope.nameList = object;
         });
+
+        $scope.viewUser = fuction(user_id) {
+        	$location.path("/users/"+user._id);
+        }
     }]);
 
