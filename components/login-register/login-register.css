@@ -64,7 +64,9 @@ div.cs142-signup {
 .cs142-registerButton {
     max-width: 360px;
     margin: 4px;
-    border: white 3px solid;
+    border-top: white 3px solid;
+    border-left: white 3px solid;
+    border-right: white 3px solid;
     padding-top: 8px;
     padding-bottom: 8px;
     color: white;
