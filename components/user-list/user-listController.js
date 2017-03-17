@@ -9,7 +9,7 @@ cs142App.controller('UserListController', ['$scope', '$resource',
             $scope.nameList = object;
         });
 
-        $scope.viewUser = fuction(user_id) {
+        $scope.viewUser = function(user_id) {
         	$location.path("/users/"+user._id);
         }
     }]);
