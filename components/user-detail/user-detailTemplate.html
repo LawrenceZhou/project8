@@ -29,7 +29,7 @@
 <div class="gridListdemoBasicUsage">
   <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
 
-    <md-grid-tile ng-repeat="photo in photos" md-colspan="{{getRandomInt(2, 4)}}" md-rowspan="{{getRandomInt(2, 4)}}"  class="cs142-preview">
+    <md-grid-tile ng-repeat="photo in photos" md-colspan="{{photo.col}}" md-rowspan="{{photo.row}}"  class="cs142-preview">
           <img ng-src = "/images/{{photo.file_name}}">
       </md-grid-tile>
 
