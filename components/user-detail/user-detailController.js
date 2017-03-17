@@ -16,8 +16,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
             $scope.main.toolBar = firstName + " " + lastName;
             $scope.user.name = firstName + " " + lastName;
         });
-
-    $scope.color = "#8D7A7A";
+        
     $scope.viewPhoto = function(user_id) {
         $location.path("/photos/" + user_id);
         console.log("/photos/" + user_id);
