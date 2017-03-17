@@ -8,10 +8,13 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
      */
     var userId = $routeParams.userId;
 
-    var userList = $resource('http://localhost:3000/user/list', {}, {'query': {method: 'GET', isArray : true}});
+    $scope.searchPeople = function(term) {
+      var userList = $resource('http://localhost:3000/user/list', {}, {'query': {method: 'GET', isArray : true}});
         var object = userList.query({}, function() {
-            $scope.nameList = object;
+        $scope.nameList = object;
         });
+    };
+
 
     var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
         var photoList = photo.query({}, function() {
