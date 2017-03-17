@@ -11,7 +11,7 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
     $scope.searchPeople = function(term) {
       var userList = $resource('http://localhost:3000/user/list', {}, {'query': {method: 'GET', isArray : true}});
         var object = userList.query({}, function() {
-        $scope.nameList = object;
+        $scope.peopleList = object;
         });
     };
 

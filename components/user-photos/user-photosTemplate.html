@@ -32,7 +32,8 @@
             mentio-for="photo._id"
             mentio-trigger-char="'@'"
             mentio-template-url="/people-mentions.tpl"
-            mentio-items="nameList"></mentio-menu>
+            mentio-search="searchPeople(term)"
+            mentio-items="peopleList"></mentio-menu>
 
               <md-button class="md-raised md-primary" ng-click="postComment(photo._id)">Post!</md-button>
       </md-input-container>
