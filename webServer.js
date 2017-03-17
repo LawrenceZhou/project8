@@ -600,10 +600,6 @@ app.post('/deleteUser/:user_id', function(request, response, callback) {
                 }
             }
         });
-    delete request.session._id;
-    delete request.session.login_name;
-    request.session.destroy(function(err) {
-        callback(err);  });
 response.end(JSON.stringify("")); 
     }
 });
