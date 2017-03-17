@@ -23,3 +23,7 @@ span.md-headline {
 md-card.cs142Project5-userBlock {
 	width: 600px; 
 }
+
+md-toolbar {
+  color: white; 
+}
