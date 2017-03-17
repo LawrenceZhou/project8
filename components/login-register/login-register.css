@@ -98,7 +98,7 @@ div.cs142-signup {
       height:3px;
       background-color:white;
       position: absolute;
-      left:right;
+      right: 0;
       bottom: 0;
 }
 
