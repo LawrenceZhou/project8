@@ -50,13 +50,13 @@ div.cs142-uploadButton {
     right: 0;
     text-align: right;
     top: 0;
+    padding: 0px 12px 0 12px;
 }
 
 /* Example stylistic flourishes */
 
 .fileContainer {
-    background: red;
-    border-radius: .5em;
+
     float: left;
     padding: .5em;
 }
