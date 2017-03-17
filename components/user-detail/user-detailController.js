@@ -11,10 +11,10 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
     var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
         var photoList = photo.query({}, function() {
             $scope.photos = photoList;
-            for(var p in $scope.photos) {
-                p.col = $scope.getRandomInt(1, 3);
-                p.row = $scope.getRandomInt(1, 3);
-                console.log(p.row, p.col);
+            for(var i = 0; i < $scope.photos.length; i++) {
+                $scope.photos[i].col = $scope.getRandomInt(1, 3);
+                $scope.photos[i].row = $scope.getRandomInt(1, 3);
+                console.log($scope.photos[i].row, $scope.photos[i].col);
             }
         });
 
