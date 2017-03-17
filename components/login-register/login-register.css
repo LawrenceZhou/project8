@@ -9,12 +9,47 @@ div.cs142-login {
 div.cs142-loginButton {
     max-width: 360px;
     margin: 4px;
-    border: white 3px solid;
+    border-top: white 3px solid;
+    border-left: white 3px solid;
     padding: 4px;
     color: white;
     cursor: pointer;
     text-align: center;
 }
+
+div.cs142-loginButton:before {
+     padding:0;margin:0;display:block;/* not really needed */
+      content: "";
+      width:50%;
+      height:3px;
+      background-color:white;
+      position: absolute;
+      left:0;
+      bottom: -3px;
+}
+
+div.cs142-loginButton:hover:before {
+      width: 100%;
+      transition: width 500ms;
+}
+
+
+div.cs142-loginButton:after {
+     padding:0;margin:0;display:block;/* not really needed */
+      content: "";
+      width:3px;
+      height:50%;
+      background-color:white;
+      position: absolute;
+      top:0;
+      right: -3px;
+}
+
+div.cs142-loginButton:hover:after {
+      height: 100%;
+      transition: height 500ms;
+}
+
 
 div.cs142-signup {
     margin-left: 370px;
@@ -67,84 +102,3 @@ md-input-container.md-login_register:not(.md-input-invalid).md-input-focused lab
 md-input-container.md-login_register label{
   color: white;
 }
-
-
-.CtaButton {
-    border-color: #f66533;
-    color: #f66533;
-    background: none;
-    border: 2px solid;
-    border-bottom: scaleX(0.26);
-    border-right: none;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 16px 68px 16px 32px;
-    position: relative;
-    text-decoration: none;
-    transition: background 250ms, color 250ms;
-
-}
-
-/*.CtaButton::before, .Theme--home .CtaButton::after {
-    background: #f66533;
-}
-
-.CtaButton.::before {
-    bottom: 0;
-    height: 2px;
-    left: 0;
-    transform: scaleX(0.77);
-    transform-origin: 0 1px;
-    width: 100%;
-}
-
-.CtaButton::before, .CtaButton::after {
-    content: '';
-    display: block;
-    position: absolute;
-    transition: transform 250ms 250ms, -webkit-transform 250ms 250ms;
-}
-
-.Theme--classes .CtaButton::before, .Theme--classes .CtaButton::after {
-    background: #f66533;
-}
-
-
-
-
-.CtaButton::after {
-    height: 100%;
-    right: 0;
-    top: 0;
-    transform: scaleY(0.2);
-        transform-origin: 4px 0;
-    width: 2px;
-}
-
-.CtaButton::before, .CtaButton::after {
-    content: '';
-    display: block;
-    position: absolute;
-        transition: transform 250ms 250ms, -webkit-transform 250ms 250ms;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
