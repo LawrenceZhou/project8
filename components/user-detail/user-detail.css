@@ -1,7 +1,8 @@
-img.cs142Project5-icon {
+md-icon svg.cs142Project5-icon {
 	width: 24px;
 	height: 24px;
-	display:inline-block;
+	float: left;
+	display: inline;
 }
 
 div.cs142Project5-item {
@@ -11,6 +12,8 @@ div.cs142Project5-item {
 div.cs142Project5-subHeader {
 	font-size: 18px;
 	color: #2f36a9;
+	float: left;
+	display: inline;
 }
 
 span.md-headline {
