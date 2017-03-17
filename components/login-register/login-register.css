@@ -74,7 +74,7 @@ md-input-container.md-login_register label{
     color: #f66533;
     background: none;
     border: 2px solid;
-    border-bottom: none;
+    border-bottom: scaleX(0.77);
     border-right: none;
     cursor: pointer;
     display: inline-block;
