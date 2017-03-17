@@ -58,7 +58,7 @@ div.cs142-uploadButton {
 .fileContainer {
 
     float: left;
-    padding: 48px 0px 12px 0px;
+    padding: 32px 0px 12px 0px;
 }
 
 .fileContainer [type=file] {
