@@ -1,10 +1,7 @@
 <script type="text/ng-template" id="/people-mentions.tpl">
-    <ul class="list-group user-search">
-        <li mentio-menu-item="person" ng-repeat="person in items" class="list-group-item">
-            <!--<mg ng-src=" { {person.imageUrl} }" class="user-photo">-->
+<md-list-item class="md-2-line">
             <span class="text-primary">{{person.first_name}}</span>
-        </li>
-    </ul>
+</md-list-item>
 </script>
 
 <md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
