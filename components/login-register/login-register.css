@@ -15,6 +15,7 @@ div.cs142-login {
     color: white;
     cursor: pointer;
     text-align: center;
+    position: relative;
 }
 
 .cs142-loginButton:before {
