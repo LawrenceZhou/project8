@@ -27,3 +27,7 @@ md-card.cs142Project5-userBlock {
 
 .toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
   color: white; }
+
+md-content.cs142Project5-userDetail {
+	background-color: white; 
+}
