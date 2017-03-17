@@ -61,15 +61,50 @@ div.cs142-signup {
     color: white;
 }
 
-div.cs142-registerButton {
+.cs142-registerButton {
     max-width: 360px;
     margin: 4px;
     border: white 3px solid;
-    padding: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     color: white;
     cursor: pointer;
     text-align: center;
+    position: relative;
 }
+
+.cs142-registerButton:before {
+     padding:0;margin:0;display:block;/* not really needed */
+      content: "";
+      width:20%;
+      height:3px;
+      background-color:white;
+      position: absolute;
+      left:0;
+      bottom: 0;
+}
+
+.cs142-loginButton:hover:before {
+      width: 50%;
+      transition: width 500ms;
+}
+
+.cs142-registerButton:after {
+     padding:0;margin:0;display:block;/* not really needed */
+      content: "";
+      width:20%;
+      height:3px;
+      background-color:white;
+      position: absolute;
+      left:right;
+      bottom: 0;
+}
+
+.cs142-loginButton:hover:after {
+      width: 50%;
+      transition: width 500ms;
+}
+
 
 input{
 border-right: #ffffff 0px solid;
