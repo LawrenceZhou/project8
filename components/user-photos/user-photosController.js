@@ -142,8 +142,9 @@ $scope.deleteComment = function(photo_id, comment_id){
             $http.post(url, modelObj).then(function successfCallback(response){
                 if(response.status === 200) {
                   console.log($scope.currentUserId + "delete user successful");
-                  
-                  var url_logout = '/admin/logout';
+
+                  $scope.logOutClick();
+                  /*var url_logout = '/admin/logout';
                   $rootScope.$broadcast('LoggedOut');
                   $scope.isLoggedIn = false;
                   $http.post(url_logout, {}).then(function successfCallback(response){
@@ -154,7 +155,7 @@ $scope.deleteComment = function(photo_id, comment_id){
                   }, function errorCallback(response){
                       console.log("log out unsuccessful");
                       //$scope.login.statusInfo = response.data;
-                });
+                }); */
               }
               }, function errorCallback(response){
                   if(response.status === 400) {
