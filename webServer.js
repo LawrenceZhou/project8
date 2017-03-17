@@ -373,7 +373,7 @@ app.post('/photos/new', function(request, response, callback) {
                 return;
               }else {
                 var dt = new Date();
-                Photo.create({ file_name: filename, date_time: dt, user_id : request.session._id}); 
+                Photo.create({ file_name: filename, date_time: dt, user_id : request.session._id, people_liked_number : 0}); 
                     response.end(JSON.stringify(""));
               }
             });
