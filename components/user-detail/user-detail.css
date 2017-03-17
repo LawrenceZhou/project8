@@ -63,8 +63,8 @@ p.description {
 .cs142Project5-viewButton:hover {
 	color: white;
 	background-color: #221A99;
-	transition-delay: 500ms;
 	transition: color 250ms, background-color 250ms;
+	transition-delay: 250ms;
 }
 .cs142Project5-viewButton:before {
     padding:0;margin:0;display:block;/* not really needed */
