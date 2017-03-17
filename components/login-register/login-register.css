@@ -73,7 +73,7 @@ md-input-container.md-login_register label{
     border-color: #f66533;
     color: #f66533;
     background: none;
-    border: 2px solid transparent;
+    border: 2px solid;
     border-bottom: none;
     border-right: none;
     cursor: pointer;
@@ -87,11 +87,11 @@ md-input-container.md-login_register label{
 
 }
 
-.CtaButton::before, .Theme--home .CtaButton::after {
+/*.CtaButton::before, .Theme--home .CtaButton::after {
     background: #f66533;
 }
 
-.CtaButton.border-bottom::before {
+.CtaButton.::before {
     bottom: 0;
     height: 2px;
     left: 0;
@@ -128,7 +128,7 @@ md-input-container.md-login_register label{
     display: block;
     position: absolute;
         transition: transform 250ms 250ms, -webkit-transform 250ms 250ms;
-}
+}*/
 
 
 
