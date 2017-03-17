@@ -26,7 +26,7 @@ div.cs142-login {
       background-color:white;
       position: absolute;
       left:0;
-      bottom: 3px;
+      bottom: 0;
 }
 
 .cs142-loginButton:hover:before {
@@ -43,7 +43,7 @@ div.cs142-login {
       background-color:white;
       position: absolute;
       top:0;
-      right: 3px;
+      right: 0;
 }
 
 .cs142-loginButton:hover:after {
