@@ -8,6 +8,17 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
      */
     var userId = $routeParams.userId;
 
+    var photo = $resource('http://localhost:3000/photosOfUser/'+userId, {}, {'query': {method: 'GET', isArray : true}});
+        var photoList = photo.query({}, function() {
+            $scope.photos = photoList;
+        });
+
+    $scope.getRandomInt = function(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    };
+
     var user = $resource('http://localhost:3000/user/:id', {}, {});
         var object = user.get({id: userId}, function() {
             $scope.user = object;
@@ -16,7 +27,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
             $scope.main.toolBar = firstName + " " + lastName;
             $scope.user.name = firstName + " " + lastName;
         });
-        
+
     $scope.viewPhoto = function(user_id) {
         $location.path("/photos/" + user_id);
         console.log("/photos/" + user_id);

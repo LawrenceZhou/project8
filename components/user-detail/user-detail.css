@@ -42,9 +42,9 @@ p.description {
 .gridListdemoBasicUsage .gray {
   background: #f5f5f5; }
 
-.gridListdemoBasicUsage .green {
+.gridListdemoBasicUsage .cs142-preview {
   overflow:hidden;
-  background: #b9f6ca; }
+}
 
 .gridListdemoBasicUsage .yellow {
   background: #ffff8d; }
