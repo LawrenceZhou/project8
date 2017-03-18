@@ -1,9 +1,3 @@
-<script type="text/ng-template" id="/people-mentions.tpl">
-    <md-list-item mentio-menu-item="person" ng-repeat="person in items" class="md-2-line">
-            <span class="text-primary">{{person.first_name}}</span>
-</md-list-item>
-</script>
-
 <md-card class = "cs142Project5-photoBlock" ng-repeat = "photo in photos">
 	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5-image">
 	<div><div class = "cs142Project5-photoTime">posted on {{photo.date_time}}</div><div class = "cs142Project5-delete" ng-click = "deletePhoto(photo._id)" ng-if="main.currentUserId == photo.user_id">Delete</div></div>
