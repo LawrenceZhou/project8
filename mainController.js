@@ -1,6 +1,6 @@
 'use strict';
 
-var cs142App = angular.module('cs142App', ['ngRoute', 'ngMaterial', 'ngResource', 'mentio']);
+var cs142App = angular.module('cs142App', ['ngRoute', 'ngMaterial', 'ngResource']);
 
 cs142App.config(['$routeProvider', '$mdThemingProvider',
     function ($routeProvider, $mdThemingProvider) {
