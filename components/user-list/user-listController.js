@@ -11,6 +11,6 @@ cs142App.controller('UserListController', ['$scope', '$resource', '$location',
 
         $scope.viewUser = function(user_id) {
         	$location.path("/users/"+user_id);
-        }
+        };
     }]);
 
