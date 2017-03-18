@@ -14,6 +14,7 @@ cs142App.controller('LoginRegisterController', ['$scope', '$routeParams', '$reso
               if(response.status === 200) {
                   $rootScope.$broadcast('LoggedIn');
                   $scope.main.first_name = response.data.first_name.toString();
+                  $scope.main.last_name = response.data.last_name.toString();
                   console.log("log in successful");
                   $location.path("/users/" + response.data._id.toString());
                   console.log("/users/" + response.data._id.toString());
