@@ -1,4 +1,9 @@
 <div class = "cs142Project5-friendsHeader">Friends</div>
+<md-list-item ng-click="viewUser(main.currentUserId)" class="right" style = "background-color: #7A7EFC;">
+    <img alt="{{ main.last_name }}" ng-src="/images/{{main.last_name.toLowerCase()}}1.jpg" class="md-avatar">
+    <p>{{main.first_name + " " + main.last_name}}</p>
+    <md-divider></md-divider>
+</md-list-item>
 <md-list-item ng-repeat="user in nameList" ng-click="viewUser(user._id)" class="noright" ng-if="main.currentUserId !== user._id">
     <img alt="{{ user.last_name }}" ng-src="/images/{{user.last_name.toLowerCase()}}1.jpg" class="md-avatar">
     <p>{{user.first_name + " " + user.last_name}}</p>
