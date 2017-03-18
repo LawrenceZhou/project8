@@ -437,7 +437,7 @@ app.post('/like/:photo_id', function(request, response, callback) {
                 return;
             }else {
                 if (photo === null) {
-                    console.log('Photo with photo_id:' + photo_id + ' not found.');
+                    console.log('Photo with photo_id:' + photoid + ' not found.');
                     response.status(400).send('Photo not found');
                     return;
                 }else if (photo.people_liked.indexOf(likeduserid) !== -1) {
@@ -469,7 +469,7 @@ app.post('/unlike/:photo_id', function(request, response, callback) {
                 return;
             }else {
                 if (photo === null) {
-                    console.log('Photo with photo_id:' + photo_id + ' not found.');
+                    console.log('Photo with photo_id:' + photoid + ' not found.');
                     response.status(400).send('Photo not found');
                     return;
                 }else if (photo.people_liked.indexOf(likeduserid) === -1) {
@@ -503,7 +503,7 @@ app.post('/deletePhoto/:photo_id', function(request, response, callback) {
                 return;
             }else {
                 if (photo === null) {
-                    console.log('Photo with photo_id:' + photo_id + ' not found.');
+                    console.log('Photo with photo_id:' + photoid + ' not found.');
                     response.status(400).send('Photo not found');
                     return;
                 }else {
@@ -531,7 +531,7 @@ app.post('/deleteComment', function(request, response, callback) {
                 return;
             }else {
                 if (photo === null) {
-                    console.log('Photo with photo_id:' + photo_id + ' not found.');
+                    console.log('Photo with photo_id:' + photoid + ' not found.');
                     response.status(400).send('Photo not found');
                     return;
                 }else {
