@@ -6,17 +6,25 @@ Enter no more than 5 user stories that you did for the assignment that you would
 graded on. For each story include the following information:
 
 Story number and name:
-Story points:
-Brief description to see the story in action:
 
-Total Story Points:
+5 - Deleting Comments, Photos, and Users
+6 - Photo like votes
+8 - Sidebar list marks users with new activity
+
+Story points:  4  4  3 
+Brief description to see the story in action:
+Deleting and Like are intuitive as you can easily take actions. As for 8 - Sidebar list marks users with new activity, I didn’t complete it. But I mark it clear who is the current user.
+
+Total Story Points: 11
 
 Marketing Video URL (ensure permissions are set to public viewing):
+https://youtu.be/ALUgpc9yxCk
 
 Is it OK with you if we post your Marketing Video URL on the class discussion forum?
+Yes!
 
 Any special instructions for Grading (should be easy to run app from new machine):
-
+Well, I spent a lot of time on UI design. I like the buttons part of my website, which have a dynamic border(hard to achieve). In addition, it’s interesting to have a collage preview of one user’s photos. You can try it, by clicking into one user’s detail page several times! It’s randomly generated! Anyway, I didn’t finish all 12 points, but spent too much time on UI design, which is not a good idea but still interesting to do!
 
 ************************************ Example *******************
 * As an example for if you did only story 5 your file would look like:
